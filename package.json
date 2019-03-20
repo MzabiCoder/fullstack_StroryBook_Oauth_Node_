@@ -19,6 +19,8 @@
   "homepage": "https://github.com/MzabiCoder/fullstack_StroryBook_Oauth_Node_#readme",
   "dependencies": {
     "express": "^4.16.4",
-    "mongoose": "^5.4.19"
+    "mongoose": "^5.4.19",
+    "nodemon": "^1.18.10",
+    "npm": "^6.9.0"
   }
 }
