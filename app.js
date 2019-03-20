@@ -1,7 +1,15 @@
 const express = require('express')
 const mongoose = require('mongoose')
+const passport = require('passport')
+
+// passport config 
+
+require('./config/passport')(passport)
+
 
 const app = express()
+
+const auth = require('./routes/auth')
 
 
 app.get('/', (req, res) => {
@@ -9,14 +17,10 @@ app.get('/', (req, res) => {
 })
 
 
+app.use('/auth', auth)
 
 
-
-
-
-
-
-PORT = process.env.PORT || 5000
+PORT = 3000
 
 app.listen(PORT, () => {
     console.log(`server is up and running on ${PORT}`)
